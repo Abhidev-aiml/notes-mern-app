@@ -36,7 +36,7 @@ const SignUp = () => {
     // SignUp API Call
 
     try {
-      const response = await axiosInstance.post("/create-account", {
+      const response = await axiosInstance.post("https://one22155-mernnotesapp11042024-1.onrender.com/create-account", {
         fullName: name,
         email: email,
         password: password,
