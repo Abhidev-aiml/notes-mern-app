@@ -18,7 +18,7 @@ const AddEditNotes = ({
 
   const addNewNote = async () => {
     try {
-      const response = await axiosInstance.post("https://one22155-mernnotesapp11042024-1.onrender.com/add-note", {
+      const response = await axiosInstance.post("https://notes-mern-app-2.onrender.com/add-note", {
         title,
         content,
         tags,
@@ -46,7 +46,7 @@ const AddEditNotes = ({
     const noteId = noteData._id
 
     try {
-      const response = await axiosInstance.put("https://one22155-mernnotesapp11042024-1.onrender.com/edit-note/" + noteId, {
+      const response = await axiosInstance.put("https://notes-mern-app-2.onrender.com/edit-note/" + noteId, {
         title,
         content,
         tags,

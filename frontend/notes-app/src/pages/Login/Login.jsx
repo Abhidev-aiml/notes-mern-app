@@ -30,7 +30,7 @@ const Login = () => {
     //Login API Call
 
     try {
-      const response = await axiosInstance.post("https://one22155-mernnotesapp11042024-1.onrender.com/login", {
+      const response = await axiosInstance.post("https://notes-mern-app-2.onrender.com/login", {
         email: email,
         password: password,
       });

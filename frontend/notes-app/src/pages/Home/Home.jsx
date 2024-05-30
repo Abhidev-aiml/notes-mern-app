@@ -54,7 +54,7 @@ const Home = () => {
   // Get all notes
   const getAllNotes = async () => {
     try {
-      const response = await axiosInstance.get("/get-all-notes");
+      const response = await axiosInstance.get("https://notes-mern-app-2.onrender.com/get-all-notes");
 
       if (response.data && response.data.notes) {
         setAllNotes(response.data.notes);
@@ -68,7 +68,7 @@ const Home = () => {
   const deleteNote = async (data) => {
     const noteId = data._id;
     try {
-      const response = await axiosInstance.delete("/delete-note/" + noteId);
+      const response = await axiosInstance.delete("https://notes-mern-app-2.onrender.com/delete-note/" + noteId);
 
       if (response.data && !response.data.error) {
         showToastMessage("Note Deleted Successfully", "delete");
@@ -82,7 +82,7 @@ const Home = () => {
   // Get User Info
   const getUserInfo = async () => {
     try {
-      const response = await axiosInstance.get("https://one22155-mernnotesapp11042024-1.onrender.com/get-user");
+      const response = await axiosInstance.get("https://notes-mern-app-2.onrender.com/get-user");
 
       if (response.data && response.data.user) {
         setUserInfo(response.data.user);
@@ -98,7 +98,7 @@ const Home = () => {
   // Search for a Note
   const onSearchNote = async (query) => {
     try {
-      const response = await axiosInstance.get("https://one22155-mernnotesapp11042024-1.onrender.com/search-notes", {
+      const response = await axiosInstance.get("https://notes-mern-app-2.onrender.com/search-notes", {
         params: { query },
       });
 
@@ -116,7 +116,7 @@ const Home = () => {
 
     try {
       const response = await axiosInstance.put(
-        "https://one22155-mernnotesapp11042024-1.onrender.com/update-note-pinned/" + noteId,
+        "https://notes-mern-app-2.onrender.com/update-note-pinned/" + noteId,
         {
           isPinned: !noteData.isPinned,
         }
